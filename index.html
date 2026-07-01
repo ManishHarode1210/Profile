@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Manish Harode — AI Developer &amp; Software Engineer. B.Tech CSE (AI). Building intelligent systems with NLP, ML, and modern web tech." />
+  <meta name="keywords" content="Manish Harode, AI Developer, Machine Learning, NLP, Portfolio, Software Engineer" />
+  <meta name="author" content="Manish Harode" />
+  <meta property="og:title" content="Manish Harode | AI Developer" />
+  <meta property="og:description"
+    content="Building intelligent systems at the intersection of AI, NLP, and modern engineering." />
+  <title>Manish Harode | AI Developer &amp; Software Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- Scroll progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Neural background canvas -->
+  <canvas id="neural-canvas" aria-hidden="true"></canvas>
+
+  <!-- Noise overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════ MOBILE MENU ═══════════════════════ -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation Menu">
+    <button class="close-menu" id="close-menu" aria-label="Close Menu">✕</button>
+    <a href="#hero" onclick="closeMobileMenu()">Home</a>
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+    <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+    <a href="#education" onclick="closeMobileMenu()">Education</a>
+    <a href="#certifications" onclick="closeMobileMenu()">Certifications</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  </div>
+
+  <!-- ═══════════════════════ NAVIGATION ═══════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Manish Harode">MH</a>
+
+      <!-- Nav HUD Telemetry -->
+      <div class="nav-hud" aria-hidden="true">
+        <span class="hud-item">[ PING: <span id="hud-ping" style="color:var(--cyan);">14</span>ms ]</span>
+        <span class="hud-item">[ LOC: 23.2593° N, 77.4126° E ]</span>
+        <span class="hud-item">[ UTC: <span id="hud-time" style="color:var(--purple);">00:00:00</span> ]</span>
+      </div>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#certifications">Certs</a></li>
+        <li><a href="#contact" class="nav-cta">Contact →</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════ PAGE WRAPPER ═══════════════════════ -->
+  <div class="page-wrapper">
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <section id="hero" aria-labelledby="hero-name">
+      <div class="floating-orb orb-1" aria-hidden="true"></div>
+      <div class="floating-orb orb-2" aria-hidden="true"></div>
+      <div class="floating-orb orb-3" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-inner">
+
+          <!-- Left: Copy -->
+          <div class="hero-content">
+
+            <div class="hero-eyebrow">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              Available for Opportunities
+            </div>
+
+            <h1 class="hero-name" id="hero-name">
+              <span class="name-white">Manish</span>
+              <span class="name-grad">Harode</span>
+            </h1>
+
+            <div class="hero-terminal" aria-label="Current role">
+              <span class="terminal-prefix" aria-hidden="true">~/</span>
+              <span id="typing-text" aria-live="polite" aria-atomic="true"></span>
+              <span class="terminal-cursor" aria-hidden="true"></span>
+            </div>
+
+            <p class="hero-bio">
+              Enthusiastic AI developer passionate about Artificial Intelligence, Natural Language
+              Processing, Machine Learning, and modern Web Development. I build intelligent software
+              that solves real-world problems with elegance and precision.
+            </p>
+
+            <div class="hero-chips">
+              <a href="mailto:manishharode772@gmail.com" class="chip" aria-label="Email">
+                <span aria-hidden="true">✉</span> manishharode772@gmail.com
+              </a>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span aria-hidden="true">⬡</span> View Projects
+              </a>
+              <a href="#" class="btn btn-outline" aria-label="Download Resume">
+                <span aria-hidden="true">↓</span> Resume
+              </a>
+              <a href="#contact" class="btn btn-purple">
+                <span aria-hidden="true">◎</span> Hire Me
+              </a>
+            </div>
+
+            <div class="hero-socials" role="list" aria-label="Social Links">
+              <a href="https://github.com/ManishHarode1210" target="_blank" rel="noopener noreferrer"
+                class="social-link" role="listitem" aria-label="GitHub" title="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link"
+                role="listitem" aria-label="LinkedIn" title="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </a>
+              <a href="mailto:manishharode772@gmail.com" class="social-link" role="listitem" aria-label="Email"
+                title="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right: Code card visual -->
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-ring-wrap">
+              <div class="ring ring-1"></div>
+              <div class="ring ring-2"></div>
+              <div class="ring ring-3"></div>
+            </div>
+
+            <div class="hero-code-card">
+              <div class="card-chrome">
+                <div class="chrome-dot chrome-red"></div>
+                <div class="chrome-dot chrome-yellow"></div>
+                <div class="chrome-dot chrome-green"></div>
+                <span class="chrome-title">ai_engineer.py</span>
+              </div>
+              <div class="code-body">
+                <div class="code-ln"><span class="ln">01</span><span><span class="kw">from</span> intelligence <span
+                      class="kw">import</span> <span class="cl">Engineer</span></span></div>
+                <div class="code-ln"><span class="ln">02</span><span></span></div>
+                <div class="code-ln"><span class="ln">03</span><span><span class="at">@dataclass</span></span></div>
+                <div class="code-ln"><span class="ln">04</span><span><span class="kw">class</span> <span
+                      class="cl">ManishHarode</span>(<span class="cl">Engineer</span>):</span></div>
+                <div class="code-ln"><span class="ln">05</span><span>&nbsp;&nbsp;role <span class="op">=</span> <span
+                      class="str">"AI Developer"</span></span></div>
+                <div class="code-ln"><span class="ln">06</span><span>&nbsp;&nbsp;year <span class="op">=</span> <span
+                      class="num">3</span></span></div>
+                <div class="code-ln"><span class="ln">07</span><span>&nbsp;&nbsp;dsa_solved <span class="op">=</span>
+                    <span class="num">750</span></span></div>
+                <div class="code-ln"><span class="ln">08</span><span></span></div>
+                <div class="code-ln"><span class="ln">09</span><span>&nbsp;&nbsp;<span class="kw">def</span> <span
+                      class="fn">skills</span>(<span class="kw">self</span>):</span></div>
+                <div class="code-ln"><span class="ln">10</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                      class="kw">return</span> [<span class="str">"AI"</span>, <span class="str">"NLP"</span>, <span
+                      class="str">"ML"</span>]</span></div>
+                <div class="code-ln"><span class="ln">11</span><span></span></div>
+                <div class="code-ln"><span class="ln">12</span><span><span class="cm"># Initializing
+                      brilliance...</span></span></div>
+                <div class="code-ln"><span class="ln">13</span><span><span
+                      class="fn">ManishHarode</span>().build_future()</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="scroll-cue" aria-hidden="true">
+        <span class="scroll-cue-text">Scroll</span>
+        <div class="scroll-cue-line"></div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ══════════════ ABOUT ══════════════ -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="glow-spot cyan-tl" aria-hidden="true"></div>
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Visual -->
+          <div class="portrait-wrap reveal from-left">
+            <div class="portrait-frame">
+              <div class="portrait-orbit" aria-hidden="true"></div>
+              <div class="portrait-inner has-photo">
+                <!--
+                  ► TO USE YOUR OWN PHOTO:
+                    Copy it to assets/images/my_photo.jpg
+                    Then change src="assets/images/portrait.png" to src="assets/images/my_photo.jpg"
+                -->
+                <img src="assets/images/portrait.png" alt="Manish Harode — AI Developer" class="portrait-photo"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                <span class="portrait-photo-fallback" role="img" aria-label="AI Developer portrait">🧑‍💻</span>
+              </div>
+              <div class="portrait-badge">
+                <span class="status-dot" aria-hidden="true"></span>
+                Open to Work &amp; Collaborate
+              </div>
+            </div>
+
+            <!-- Floating info cards -->
+            <div class="portrait-float f-1" aria-hidden="true">
+              <strong>750+</strong>
+              DSA Problems
+            </div>
+            <div class="portrait-float f-2" aria-hidden="true">
+              <strong>200+</strong>
+              Day Streak
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="about-content">
+            <div class="section-label reveal">About Me</div>
+            <h2 class="section-heading reveal delay-1" id="about-heading">
+              Crafting Intelligent<br><span class="grad">Digital Futures</span>
+            </h2>
+            <p class="about-text reveal delay-2">
+              I'm Manish Harode, a 3rd-year B.Tech Computer Science student specialising in
+              Artificial Intelligence at Technocrats Institute of Technology, Bhopal. My passion
+              lives at the intersection of AI research and real-world engineering — building systems
+              that think, adapt, and deliver lasting value.
+            </p>
+            <p class="about-text reveal delay-2" style="margin-top:-1.2rem;">
+              From training large language models to architecting full-stack platforms, I combine
+              deep technical knowledge with product intuition. Every project I build is a step
+              towards making AI more accessible, intelligent, and impactful.
+            </p>
+
+            <div class="stats-row">
+              <div class="stat-item reveal delay-2">
+                <div class="stat-num"><span class="count-up" data-target="750">0</span>+</div>
+                <div class="stat-lbl">DSA Problems Solved</div>
+              </div>
+              <div class="stat-item reveal delay-3">
+                <div class="stat-num"><span class="count-up" data-target="200">0</span>+</div>
+                <div class="stat-lbl">Day CodeChef Streak</div>
+              </div>
+              <div class="stat-item reveal delay-4">
+                <div class="stat-num"><span class="count-up" data-target="4">0</span>+</div>
+                <div class="stat-lbl">Major AI Projects</div>
+              </div>
+              <div class="stat-item reveal delay-5">
+                <div class="stat-num"><span class="count-up" data-target="4">0</span>+</div>
+                <div class="stat-lbl">Certifications</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ══════════════ SKILLS ══════════════ -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <div class="glow-spot purple-br" aria-hidden="true"></div>
+      <div class="container">
+
+        <div class="skills-header">
+          <div class="section-label reveal">Tech Stack</div>
+          <h2 class="section-heading reveal delay-1" id="skills-heading">
+            Tools &amp; <span class="grad">Technologies</span>
+          </h2>
+          <p class="section-sub reveal delay-2">
+            A curated diagnostic toolkit forged through deep project work, hackathons, and relentless learning across
+            the AI and software engineering spectrum.
+          </p>
+        </div>
+
+        <div class="skills-layout">
+          <!-- Left: Categories & Nodes -->
+          <div class="skills-main-content">
+
+            <!-- Core AI / CS -->
+            <div class="skill-group reveal delay-1">
+              <div class="skill-group-header">
+                <span class="skill-group-label">Core &amp; AI Engineering</span>
+                <div class="skill-group-line"></div>
+              </div>
+              <div class="skills-grid">
+                <div class="skill-node" tabindex="0" data-skill="Java" data-level="90%" data-category="Core Engineering"
+                  data-desc="Object-Oriented Programming, data structures, algorithm design, multithreading, and platform-independent application development."
+                  data-status="OPERATIONAL" data-hex="0x4A 0x61 0x76 0x61">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">☕</span>
+                    <span class="skill-node-name">Java</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 90%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="Artificial Intelligence" data-level="85%"
+                  data-category="Core &amp; AI"
+                  data-desc="Search algorithms, optimization, knowledge representation, game theory, logic programming, and expert system design."
+                  data-status="ACTIVE" data-hex="0x41 0x72 0x74 0x49">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">🧠</span>
+                    <span class="skill-node-name">Artificial Intelligence</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 85%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="Machine Learning" data-level="88%"
+                  data-category="Core &amp; AI"
+                  data-desc="Supervised/unsupervised learning, classification, regression, clustering models, neural network architectures, and feature engineering."
+                  data-status="STABLE" data-hex="0x4D 0x61 0x63 0x4C">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">🤖</span>
+                    <span class="skill-node-name">Machine Learning</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 88%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="Natural Language Processing" data-level="92%"
+                  data-category="Core &amp; AI"
+                  data-desc="Text processing, tokenization, semantic analysis, classification, sentiment analysis, word embeddings, and language modeling."
+                  data-status="CRITICAL" data-hex="0x4E 0x4C 0x50 0x5F">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">💬</span>
+                    <span class="skill-node-name">NLP</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 92%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="Operating Systems" data-level="80%"
+                  data-category="Core Engineering"
+                  data-desc="Process synchronization, scheduling, memory management, file systems, device management, and multi-threaded systems architecture."
+                  data-status="STABLE" data-hex="0x4F 0x70 0x53 0x79">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">⚙️</span>
+                    <span class="skill-node-name">Operating Systems</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 80%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Web Development & Scripts -->
+            <div class="skill-group reveal delay-2">
+              <div class="skill-group-header">
+                <span class="skill-group-label">Web &amp; Backend Engineering</span>
+                <div class="skill-group-line"></div>
+              </div>
+              <div class="skills-grid">
+                <div class="skill-node" tabindex="0" data-skill="HTML5" data-level="95%" data-category="Web Development"
+                  data-desc="Semantic elements, DOM hierarchy, page structure, modern accessibility guidelines (WCAG), and responsive design principles."
+                  data-status="OPERATIONAL" data-hex="0x48 0x54 0x4D 0x4C">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">🌐</span>
+                    <span class="skill-node-name">HTML5</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 95%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="CSS3" data-level="92%" data-category="Web Development"
+                  data-desc="Flexbox, Grid, custom properties, animations, transitions, design systems, responsive layout optimization, and fluid typography."
+                  data-status="OPERATIONAL" data-hex="0x43 0x53 0x53 0x33">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">🎨</span>
+                    <span class="skill-node-name">CSS3</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 92%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="JavaScript" data-level="90%"
+                  data-category="Web Development"
+                  data-desc="ES6+ syntax, asynchronous programming (Promises, Async/Await), scope, closures, event loops, and dynamic DOM manipulation."
+                  data-status="OPERATIONAL" data-hex="0x4A 0x53 0x5F 0x45">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">⚡</span>
+                    <span class="skill-node-name">JavaScript</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 90%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="React" data-level="85%" data-category="Web Development"
+                  data-desc="Component lifecycle, state management (Hooks, Context), virtual DOM rendering, side effects management, and high-performance SPA creation."
+                  data-status="ACTIVE" data-hex="0x52 0x65 0x61 0x63">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">⚛️</span>
+                    <span class="skill-node-name">React</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 85%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="Node.js" data-level="82%"
+                  data-category="Web Development"
+                  data-desc="Event-driven backend servers, asynchronous I/O operations, package management, RESTful APIs, and runtime execution optimizations."
+                  data-status="STABLE" data-hex="0x4E 0x6F 0x64 0x65">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">🟢</span>
+                    <span class="skill-node-name">Node.js</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 82%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="Python" data-level="90%"
+                  data-category="Backend &amp; Scripts"
+                  data-desc="Scripting, data manipulation, machine learning integration, fast prototyping, package ecosystem, and modern backend integration."
+                  data-status="OPERATIONAL" data-hex="0x50 0x79 0x74 0x68">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">🐍</span>
+                    <span class="skill-node-name">Python</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 90%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="FastAPI" data-level="86%"
+                  data-category="Backend &amp; Scripts"
+                  data-desc="High-performance asynchronous API endpoints, automatic Swagger UI documentation, type hints validation, and fast database interfacing."
+                  data-status="ACTIVE" data-hex="0x46 0x61 0x73 0x74">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">⚡</span>
+                    <span class="skill-node-name">FastAPI</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 86%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="HTTPX" data-level="80%"
+                  data-category="Backend &amp; Scripts"
+                  data-desc="Asynchronous HTTP clients, connection pooling, requests/responses parsing, authentication workflows, and robust API calls."
+                  data-status="STABLE" data-hex="0x48 0x54 0x54 0x50">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">🔗</span>
+                    <span class="skill-node-name">HTTPX</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 80%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- AI / LLM Tools -->
+            <div class="skill-group reveal delay-3">
+              <div class="skill-group-header">
+                <span class="skill-group-label">Local LLM &amp; Cloud Integration</span>
+                <div class="skill-group-line"></div>
+              </div>
+              <div class="skills-grid">
+                <div class="skill-node" tabindex="0" data-skill="Ollama" data-level="85%" data-category="AI / LLM Tools"
+                  data-desc="Local large language model orchestrations, custom system prompts, parameter fine-tuning, and offline model execution."
+                  data-status="STABLE" data-hex="0x4F 0x6C 0x6C 0x61">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">🦙</span>
+                    <span class="skill-node-name">Ollama</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 85%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="Llama 3" data-level="88%"
+                  data-category="AI / LLM Tools"
+                  data-desc="Advanced context processing, model orchestration, prompt engineering, conversational memory management, and embeddings extraction."
+                  data-status="ACTIVE" data-hex="0x4C 0x6C 0x61 0x6D">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">🤖</span>
+                    <span class="skill-node-name">Llama 3</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 88%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="Firebase" data-level="82%"
+                  data-category="Cloud Integration"
+                  data-desc="Realtime databases, user authentication systems, serverless cloud storage, hosting setups, and firestore query optimization."
+                  data-status="STABLE" data-hex="0x46 0x69 0x72 0x65">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">🔥</span>
+                    <span class="skill-node-name">Firebase</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 82%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="Cloudinary" data-level="80%"
+                  data-category="Cloud Integration"
+                  data-desc="Cloud asset management, automated image/video optimizations, responsive transformations, and secure media delivery."
+                  data-status="STABLE" data-hex="0x43 0x6C 0x6F 0x75">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">☁️</span>
+                    <span class="skill-node-name">Cloudinary</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 80%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-group reveal delay-4">
+              <div class="skill-group-header">
+                <span class="skill-group-label">Platforms &amp; Ecosystem</span>
+                <div class="skill-group-line"></div>
+              </div>
+              <div class="skills-grid">
+                <div class="skill-node" tabindex="0" data-skill="Git" data-level="90%" data-category="Ecosystem Tools"
+                  data-desc="Distributed version control, branching workflows, merges, conflict resolution, rebase operations, and repository management."
+                  data-status="OPERATIONAL" data-hex="0x47 0x69 0x74 0x5F">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">🔀</span>
+                    <span class="skill-node-name">Git</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 90%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="GitHub" data-level="88%"
+                  data-category="Ecosystem Tools"
+                  data-desc="Collaborative workflows, PR codes reviews, repository hosting, issue tracking, markdown documentation, and developer profile hosting."
+                  data-status="OPERATIONAL" data-hex="0x47 0x69 0x74 0x48">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">🐙</span>
+                    <span class="skill-node-name">GitHub</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 88%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="VS Code" data-level="90%"
+                  data-category="Ecosystem Tools"
+                  data-desc="Workspace customization, debugging environments, extension configurations, workspace profiles, and rapid local code compiling."
+                  data-status="OPERATIONAL" data-hex="0x56 0x53 0x43 0x6F">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">💙</span>
+                    <span class="skill-node-name">VS Code</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 90%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-node" tabindex="0" data-skill="Figma" data-level="75%" data-category="Ecosystem Tools"
+                  data-desc="Interactive UI/UX design, frame structures, prototype layouts, auto layouts, typography scales, and component assets creation."
+                  data-status="ACTIVE" data-hex="0x46 0x69 0x67 0x6D">
+                  <div class="skill-node-glow"></div>
+                  <div class="skill-node-header">
+                    <span class="skill-node-icon">🎯</span>
+                    <span class="skill-node-name">Figma</span>
+                  </div>
+                  <div class="skill-node-bar">
+                    <div class="skill-node-progress" style="width: 75%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Interactive HUD Console -->
+          <div class="skills-sidebar reveal delay-2">
+            <div class="skills-console-wrap">
+              <div class="console-screen">
+                <div class="console-scanline"></div>
+                <div class="console-header">
+                  <span class="console-led animate-pulse"></span>
+                  <span class="console-title">SYSTEM DIAGNOSTIC PANEL</span>
+                </div>
+                <div class="console-body" id="skills-terminal-output">
+                  <!-- JS will print dynamic telemetry here -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ══════════════ PROJECTS ══════════════ -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="glow-spot cyan-center" aria-hidden="true"></div>
+      <div class="container">
+
+        <div class="projects-header">
+          <div class="section-label reveal">Projects</div>
+          <h2 class="section-heading reveal delay-1" id="projects-heading">
+            Featured <span class="grad">Work</span>
+          </h2>
+          <p class="section-sub reveal delay-2">
+            A collection of projects pushing the boundaries of AI, web technology, and user experience.
+          </p>
+        </div>
+
+        <div class="project-bento">
+
+          <!-- Project 1: NexPrep AI -->
+          <article class="project-card reveal" aria-labelledby="p1-title">
+            <div class="animated-border" aria-hidden="true"></div>
+            <span class="project-featured" aria-label="Featured">✦ Featured</span>
+
+            <div class="project-img-wrap tint-cyan">
+              <img src="assets/images/nexprep_ai.png" alt="NexPrep AI — Neural Interview Simulation" loading="lazy" />
+              <canvas class="project-neural-canvas" data-color="cyan" aria-hidden="true"></canvas>
+            </div>
+
+            <div class="project-body">
+              <div class="project-tag-strip">
+                <span class="project-tag ai">AI / LLM</span>
+                <span class="project-tag python">Python</span>
+                <span class="project-tag">Full Stack</span>
+              </div>
+              <div class="project-number">01 / 04</div>
+              <h3 class="project-title" id="p1-title">NexPrep AI</h3>
+              <p class="project-desc">
+                AI-powered interview simulation featuring local LLMs, ATS resume analysis, speech
+                evaluation, and intelligent performance tracking. Adaptive questioning with instant
+                feedback creates a truly realistic interview environment.
+              </p>
+              <div class="project-stats">
+                <div>
+                  <span class="project-stat-val cyan">Llama 3</span>
+                  <span class="project-stat-lbl">Local LLM</span>
+                </div>
+                <div>
+                  <span class="project-stat-val purple">FastAPI</span>
+                  <span class="project-stat-lbl">Backend</span>
+                </div>
+                <div>
+                  <span class="project-stat-val green">ATS</span>
+                  <span class="project-stat-lbl">Resume AI</span>
+                </div>
+              </div>
+              <div class="tech-badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">Node.js</span>
+                <span class="badge purple">Firebase</span>
+                <span class="badge purple">Python</span>
+                <span class="badge purple">FastAPI</span>
+                <span class="badge">HTTPX</span>
+                <span class="badge purple">Ollama</span>
+                <span class="badge">Llama 3</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/ManishHarode1210" target="_blank" rel="noopener"
+                  class="btn btn-outline btn-sm">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                  GitHub
+                </a>
+                <a href="#" class="btn btn-primary btn-sm">↗ Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: NavDisha -->
+          <article class="project-card reveal delay-1" aria-labelledby="p2-title">
+            <div class="animated-border" aria-hidden="true"></div>
+
+            <div class="project-img-wrap tint-purple">
+              <img src="assets/images/navdisha.png" alt="NavDisha Web — Educational Platform" loading="lazy" />
+            </div>
+
+            <div class="project-body">
+              <div class="project-tag-strip">
+                <span class="project-tag edu">Education</span>
+                <span class="project-tag web">React</span>
+              </div>
+              <div class="project-number">02 / 04</div>
+              <h3 class="project-title" id="p2-title">NavDisha Web</h3>
+              <p class="project-desc">
+                Educational platform empowering rural students with quality learning resources.
+                Cloud-based content delivery, interactive lessons, and real-time progress tracking
+                to bridge the education gap.
+              </p>
+              <div class="project-stats">
+                <div>
+                  <span class="project-stat-val" style="color:#ffb86c">React</span>
+                  <span class="project-stat-lbl">Frontend</span>
+                </div>
+                <div>
+                  <span class="project-stat-val purple">Firebase</span>
+                  <span class="project-stat-lbl">Backend</span>
+                </div>
+              </div>
+              <div class="tech-badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge purple">React</span>
+                <span class="badge purple">Firebase</span>
+                <span class="badge">Cloudinary</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/ManishHarode1210" target="_blank" rel="noopener"
+                  class="btn btn-outline btn-sm">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                  GitHub
+                </a>
+                <a href="#" class="btn btn-primary btn-sm">↗ Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Aura Voice OS -->
+          <article class="project-card reveal delay-2" aria-labelledby="p3-title">
+            <div class="animated-border" aria-hidden="true"></div>
+
+            <div class="project-img-wrap tint-cyan">
+              <img src="assets/images/aura_voice.png" alt="Aura Voice OS — AI Desktop Assistant" loading="lazy" />
+            </div>
+
+            <div class="project-body">
+              <div class="project-tag-strip">
+                <span class="project-tag voice">Voice AI</span>
+                <span class="project-tag python">Python</span>
+              </div>
+              <div class="project-number">03 / 04</div>
+              <h3 class="project-title" id="p3-title">Aura Voice OS</h3>
+              <p class="project-desc">
+                Intelligent desktop assistant launching apps, executing OS commands, and integrating
+                computer vision. A personal AI operating layer that understands natural speech and
+                context-aware commands.
+              </p>
+              <div class="project-stats">
+                <div>
+                  <span class="project-stat-val green">Vision</span>
+                  <span class="project-stat-lbl">CV Module</span>
+                </div>
+                <div>
+                  <span class="project-stat-val cyan">Voice</span>
+                  <span class="project-stat-lbl">Speech AI</span>
+                </div>
+              </div>
+              <div class="tech-badges">
+                <span class="badge purple">Python</span>
+                <span class="badge">Speech Recognition</span>
+                <span class="badge purple">Computer Vision</span>
+                <span class="badge">OS Automation</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/ManishHarode1210" target="_blank" rel="noopener"
+                  class="btn btn-outline btn-sm">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                  GitHub
+                </a>
+                <a href="#" class="btn btn-primary btn-sm">↗ Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: InterviewIQ -->
+          <article class="project-card reveal delay-3" aria-labelledby="p4-title">
+            <div class="animated-border" aria-hidden="true"></div>
+            <span class="project-featured" aria-label="Featured">✦ Featured</span>
+
+            <div class="project-img-wrap tint-purple">
+              <img src="assets/images/interviewiq.png" alt="InterviewIQ — AI Mock Interview Platform" loading="lazy" />
+              <canvas class="project-neural-canvas" data-color="purple" aria-hidden="true"></canvas>
+            </div>
+
+            <div class="project-body">
+              <div class="project-tag-strip">
+                <span class="project-tag ai">AI / ML</span>
+                <span class="project-tag">NLP</span>
+                <span class="project-tag python">Python</span>
+              </div>
+              <div class="project-number">04 / 04</div>
+              <h3 class="project-title" id="p4-title">InterviewIQ</h3>
+              <p class="project-desc">
+                AI-powered mock interview platform using adaptive evaluation algorithms for technical
+                and communication assessment. Real-time feedback, sentiment analysis, and personalised
+                improvement plans for every candidate.
+              </p>
+              <div class="project-stats">
+                <div>
+                  <span class="project-stat-val cyan">NLP</span>
+                  <span class="project-stat-lbl">Language AI</span>
+                </div>
+                <div>
+                  <span class="project-stat-val pink">Sentiment</span>
+                  <span class="project-stat-lbl">Emotion AI</span>
+                </div>
+                <div>
+                  <span class="project-stat-val purple">Adaptive</span>
+                  <span class="project-stat-lbl">Algorithm</span>
+                </div>
+              </div>
+              <div class="tech-badges">
+                <span class="badge purple">AI / ML</span>
+                <span class="badge">NLP</span>
+                <span class="badge purple">Python</span>
+                <span class="badge">Adaptive Algo</span>
+                <span class="badge">Sentiment</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/ManishHarode1210" target="_blank" rel="noopener"
+                  class="btn btn-outline btn-sm">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                  GitHub
+                </a>
+                <a href="#" class="btn btn-primary btn-sm">↗ Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ══════════════ EDUCATION ══════════════ -->
+    <section id="education" aria-labelledby="edu-heading">
+      <div class="glow-spot purple-br" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-label reveal">Education</div>
+        <h2 class="section-heading reveal delay-1" id="edu-heading">
+          Academic <span class="grad">Journey</span>
+        </h2>
+
+        <div class="education-layout">
+          <div class="edu-timeline">
+            <div class="edu-card glass reveal delay-2">
+              <div class="edu-chip-header" style="display:flex; gap:0.5rem; margin-bottom:1rem;">
+                <span class="project-tag ai" style="font-size:0.58rem;">[SYS_CORE: ACADEMIA]</span>
+                <span class="project-tag voice" style="font-size:0.58rem;">[STATUS: ONLINE]</span>
+              </div>
+              <div class="edu-period">🎓 2023 – 2027</div>
+              <h3 class="edu-degree">Bachelor of Technology</h3>
+              <div class="edu-field">Computer Science Engineering — Artificial Intelligence</div>
+              <div class="edu-institution">Technocrats Institute of Technology (Excellence), Bhopal</div>
+
+              <div class="edu-blueprint-grid"
+                style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem; margin:1.5rem 0; padding:1rem; background:rgba(255,255,255,0.015); border:1px dashed var(--b-subtle); border-radius:var(--r-sm);">
+                <div>
+                  <div
+                    style="font-family:var(--font-mono); font-size:0.58rem; color:var(--t-muted); text-transform:uppercase; letter-spacing:0.08em;">
+                    SECTOR</div>
+                  <div
+                    style="font-family:var(--font-mono); font-size:0.75rem; color:var(--cyan); font-weight:700; margin-top:2px;">
+                    0x09_BPL</div>
+                </div>
+                <div>
+                  <div
+                    style="font-family:var(--font-mono); font-size:0.58rem; color:var(--t-muted); text-transform:uppercase; letter-spacing:0.08em;">
+                    FREQUENCY</div>
+                  <div
+                    style="font-family:var(--font-mono); font-size:0.75rem; color:var(--purple); font-weight:700; margin-top:2px;">
+                    4.0_YEARS</div>
+                </div>
+                <div>
+                  <div
+                    style="font-family:var(--font-mono); font-size:0.58rem; color:var(--t-muted); text-transform:uppercase; letter-spacing:0.08em;">
+                    INTEGRITY</div>
+                  <div
+                    style="font-family:var(--font-mono); font-size:0.75rem; color:var(--green); font-weight:700; margin-top:2px;">
+                    VERIFIED</div>
+                </div>
+              </div>
+
+              <div class="edu-meta">
+                <div class="edu-meta-item">
+                  <span class="edu-meta-label">Duration</span>
+                  <span class="edu-meta-value">4 Years</span>
+                </div>
+                <div class="edu-meta-item">
+                  <span class="edu-meta-label">Current Year</span>
+                  <span class="edu-meta-value">3rd Year</span>
+                </div>
+                <div class="edu-meta-item">
+                  <span class="edu-meta-label">Specialisation</span>
+                  <span class="edu-meta-value">AI &amp; ML</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal delay-3">
+            <div class="cgpa-card glass">
+              <div class="cgpa-label">[REACTOR CORE ENERGETICS]</div>
+              <div class="cgpa-ring" style="position:relative;">
+                <div class="cgpa-orbit-ring"
+                  style="position:absolute; inset:-8px; border:1.5px dashed rgba(0,212,255,0.18); border-radius:50%; animation:rotateRing 12s linear infinite;">
+                </div>
+                <div class="cgpa-orbit-ring"
+                  style="position:absolute; inset:-16px; border:1px solid rgba(139,92,246,0.08); border-radius:50%; animation:rotateRing 20s linear infinite reverse;">
+                </div>
+                <svg viewBox="0 0 140 140" width="140" height="140">
+                  <defs>
+                    <linearGradient id="cgpa-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#00d4ff" />
+                      <stop offset="100%" stop-color="#8b5cf6" />
+                    </linearGradient>
+                  </defs>
+                  <circle class="cgpa-bg" cx="70" cy="70" r="60" />
+                  <circle class="cgpa-fill" cx="70" cy="70" r="60" />
+                </svg>
+                <div class="cgpa-number">7.05</div>
+              </div>
+              <div class="cgpa-out" style="margin-top:1.5rem;">CGPA LOAD / 10.00</div>
+              <div
+                style="display:flex; justify-content:center; gap:12px; margin-top:0.8rem; font-family:var(--font-mono); font-size:0.62rem; color:var(--green);">
+                <span>[SYS_OK]</span>
+                <span>[LOAD_HIGH]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ══════════════ ACHIEVEMENTS ══════════════ -->
+    <section id="achievements" aria-labelledby="ach-heading">
+      <div class="glow-spot cyan-tl" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-label reveal">Achievements</div>
+        <h2 class="section-heading reveal delay-1" id="ach-heading">
+          Milestones &amp; <span class="grad">Wins</span>
+        </h2>
+        <p class="section-sub reveal delay-2">
+          A system datastream of consistency, leadership, and community impact.
+        </p>
+
+        <div class="achievements-grid">
+          <div class="ach-card reveal delay-1">
+            <div
+              style="font-family:var(--font-mono); font-size:0.58rem; color:var(--t-muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.75rem;">
+              [REGISTRY: ALGO_01]</div>
+            <span class="ach-icon">⚡</span>
+            <div class="ach-title">750+ DSA Problems Solved</div>
+            <p class="ach-desc">Consistently solving complex algorithmic challenges across LeetCode and CodeChef,
+              refining high-performance logic structures.</p>
+            <div
+              style="height:3px; background:rgba(255,255,255,0.04); border-radius:10px; overflow:hidden; margin:1.2rem 0 0.5rem;">
+              <div style="height:100%; width:90%; background:var(--grad-primary); box-shadow:0 0 8px var(--cyan);">
+              </div>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:0.58rem; color:var(--green); letter-spacing:0.04em;">
+              INTEGRITY CHECK: SUCCESSFUL</div>
+          </div>
+          <div class="ach-card reveal delay-2">
+            <div
+              style="font-family:var(--font-mono); font-size:0.58rem; color:var(--t-muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.75rem;">
+              [REGISTRY: TIMELINE_02]</div>
+            <span class="ach-icon">🔥</span>
+            <div class="ach-title">200+ Day CodeChef Streak</div>
+            <p class="ach-desc">Maintained an impressive daily logic-training streak, validating engineering
+              consistency, resilience, and output integrity.</p>
+            <div
+              style="height:3px; background:rgba(255,255,255,0.04); border-radius:10px; overflow:hidden; margin:1.2rem 0 0.5rem;">
+              <div style="height:100%; width:95%; background:var(--grad-primary); box-shadow:0 0 8px var(--cyan);">
+              </div>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:0.58rem; color:var(--cyan); letter-spacing:0.04em;">
+              DECRYPT: COMPLETED</div>
+          </div>
+          <div class="ach-card reveal delay-3">
+            <div
+              style="font-family:var(--font-mono); font-size:0.58rem; color:var(--t-muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.75rem;">
+              [REGISTRY: INTEL_03]</div>
+            <span class="ach-icon">🏆</span>
+            <div class="ach-title">Smart India Hackathon — Team Lead</div>
+            <p class="ach-desc">Directed engineering pipelines and system integrations in India's premier national
+              hackathon, compiling an AI build under timeline constraints.</p>
+            <div
+              style="height:3px; background:rgba(255,255,255,0.04); border-radius:10px; overflow:hidden; margin:1.2rem 0 0.5rem;">
+              <div style="height:100%; width:85%; background:var(--grad-primary); box-shadow:0 0 8px var(--cyan);">
+              </div>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:0.58rem; color:var(--purple); letter-spacing:0.04em;">
+              SYSTEM LOAD: STABLE</div>
+          </div>
+          <div class="ach-card reveal delay-4">
+            <div
+              style="font-family:var(--font-mono); font-size:0.58rem; color:var(--t-muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.75rem;">
+              [REGISTRY: INTERFACE_04]</div>
+            <span class="ach-icon">🌟</span>
+            <div class="ach-title">Volunteer — Multiple Campus Drives</div>
+            <p class="ach-desc">Facilitated system operations and coordinated protocols across campus-wide developer
+              events, supporting talent pipeline interfaces.</p>
+            <div
+              style="height:3px; background:rgba(255,255,255,0.04); border-radius:10px; overflow:hidden; margin:1.2rem 0 0.5rem;">
+              <div style="height:100%; width:80%; background:var(--grad-primary); box-shadow:0 0 8px var(--cyan);">
+              </div>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:0.58rem; color:var(--green); letter-spacing:0.04em;">
+              INTERFACE: ONLINE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ══════════════ CERTIFICATIONS ══════════════ -->
+    <section id="certifications" aria-labelledby="cert-heading">
+      <div class="glow-spot purple-br" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-label reveal">Certifications</div>
+        <h2 class="section-heading reveal delay-1" id="cert-heading">
+          Professional <span class="grad">Certifications</span>
+        </h2>
+        <p class="section-sub reveal delay-2">
+          Industry-recognised credentials from world-leading technology organisations. Toggle categories and select any
+          card for dynamic diagnostic blueprint verification.
+        </p>
+
+        <!-- Category Filters -->
+        <div class="cert-filters reveal delay-2">
+          <button class="cert-filter-btn active" data-filter="all">[ ALL_DEVICES ]</button>
+          <button class="cert-filter-btn" data-filter="ai-ml">[ AI_&amp;_ML ]</button>
+          <button class="cert-filter-btn" data-filter="cloud">[ CLOUD ]</button>
+          <button class="cert-filter-btn" data-filter="platforms">[ SERVICENOW ]</button>
+        </div>
+
+        <div class="certs-grid">
+
+          <!-- Card 1: IBM AI -->
+          <div class="cert-card reveal delay-1" data-category="ai-ml" data-id="MH-IBM-AI-8274" data-issue="OCTOBER 2024"
+            data-skills="Machine Learning, Neural Networks, Deep Learning, Watson AI, Cognitive Computing"
+            data-url="https://www.credly.com/org/ibm">
+            <div class="cert-inner">
+              <div class="cert-front">
+                <div class="cert-glow-spot"></div>
+                <div class="cert-badge-header">
+                  <span class="cert-status-tag"><span class="status-dot green"></span> VERIFIED</span>
+                  <span class="cert-serial-tag">0x8274</span>
+                </div>
+                <div class="cert-logo">
+                  <svg class="cert-logo-svg ibm-glow" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                    stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="5" r="2.5" fill="var(--cyan-dim)" />
+                    <circle cx="5" cy="12" r="2.5" />
+                    <circle cx="19" cy="12" r="2.5" />
+                    <circle cx="12" cy="19" r="2.5" fill="var(--cyan-dim)" />
+                    <line x1="12" y1="7.5" x2="5" y2="12" />
+                    <line x1="12" y1="7.5" x2="19" y2="12" />
+                    <line x1="5" y1="12" x2="12" y2="16.5" />
+                    <line x1="19" y1="12" x2="12" y2="16.5" />
+                    <line x1="12" y1="5" x2="12" y2="19" stroke-dasharray="2 2" />
+                  </svg>
+                </div>
+                <div class="cert-issuer">IBM</div>
+                <h3 class="cert-title">Fundamentals of Artificial Intelligence</h3>
+                <div class="cert-date">OCT_2024</div>
+              </div>
+              <div class="cert-back">
+                <div class="cert-glow-spot"></div>
+                <div class="cert-back-icon">🧠</div>
+                <p class="cert-back-text">Comprehensive AI foundations covering ML algorithms, neural networks, and
+                  IBM's Watson platform.</p>
+                <div class="cert-actions-wrap">
+                  <button class="cert-view-btn">[ OPEN BLUEPRINT ]</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: IBM NLP -->
+          <div class="cert-card reveal delay-2" data-category="ai-ml" data-id="MH-IBM-NLP-9831"
+            data-issue="NOVEMBER 2024"
+            data-skills="Text Classification, Sentiment Analysis, Tokenization, BERT, Transformer Models, NLP Pipelines"
+            data-url="https://www.credly.com/org/ibm">
+            <div class="cert-inner">
+              <div class="cert-front">
+                <div class="cert-glow-spot"></div>
+                <div class="cert-badge-header">
+                  <span class="cert-status-tag"><span class="status-dot green"></span> VERIFIED</span>
+                  <span class="cert-serial-tag">0x9831</span>
+                </div>
+                <div class="cert-logo">
+                  <svg class="cert-logo-svg ibm-glow" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                    stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3" />
+                    <path d="M12 2a10 10 0 1 0 10 10H12V2z" />
+                    <path d="M12 12L7 7" />
+                    <path d="M12 12l4-7" />
+                  </svg>
+                </div>
+                <div class="cert-issuer">IBM</div>
+                <h3 class="cert-title">Natural Language Processing</h3>
+                <div class="cert-date">NOV_2024</div>
+              </div>
+              <div class="cert-back">
+                <div class="cert-glow-spot"></div>
+                <div class="cert-back-icon">💬</div>
+                <p class="cert-back-text">Deep dive into NLP techniques, text classification, sentiment analysis, and
+                  language model architectures.</p>
+                <div class="cert-actions-wrap">
+                  <button class="cert-view-btn">[ OPEN BLUEPRINT ]</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: MS Azure -->
+          <div class="cert-card reveal delay-3" data-category="cloud" data-id="MH-MS-AZ900-7212"
+            data-issue="JANUARY 2025"
+            data-skills="Cloud Infrastructure, Azure Resource Manager, Virtual Networks, IAM Security, SLAs"
+            data-url="https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/">
+            <div class="cert-inner">
+              <div class="cert-front">
+                <div class="cert-glow-spot"></div>
+                <div class="cert-badge-header">
+                  <span class="cert-status-tag"><span class="status-dot green"></span> VERIFIED</span>
+                  <span class="cert-serial-tag">0x7212</span>
+                </div>
+                <div class="cert-logo">
+                  <svg class="cert-logo-svg azure-glow" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                    stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                    <path d="M2 17l10 5 10-5" />
+                    <path d="M2 12l10 5 10-5" />
+                  </svg>
+                </div>
+                <div class="cert-issuer">Microsoft</div>
+                <h3 class="cert-title">Azure Fundamentals (AZ-900)</h3>
+                <div class="cert-date">JAN_2025</div>
+              </div>
+              <div class="cert-back">
+                <div class="cert-glow-spot"></div>
+                <div class="cert-back-icon">☁️</div>
+                <p class="cert-back-text">Microsoft Azure cloud services, infrastructure, pricing models, and core cloud
+                  computing concepts.</p>
+                <div class="cert-actions-wrap">
+                  <button class="cert-view-btn">[ OPEN BLUEPRINT ]</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: ServiceNow -->
+          <div class="cert-card reveal delay-4" data-category="platforms" data-id="MH-SN-CIS-4491"
+            data-issue="MARCH 2025"
+            data-skills="ServiceNow Discovery, Data Model Configuration, MID Servers, CMDB Schema, System Architecture"
+            data-url="https://nowlearning.servicenow.com/">
+            <div class="cert-inner">
+              <div class="cert-front">
+                <div class="cert-glow-spot"></div>
+                <div class="cert-badge-header">
+                  <span class="cert-status-tag"><span class="status-dot green"></span> VERIFIED</span>
+                  <span class="cert-serial-tag">0x4491</span>
+                </div>
+                <div class="cert-logo">
+                  <svg class="cert-logo-svg servicenow-glow" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                    stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <line x1="9" y1="3" x2="9" y2="21" />
+                    <line x1="15" y1="3" x2="15" y2="21" />
+                    <line x1="3" y1="9" x2="21" y2="9" />
+                    <line x1="3" y1="15" x2="21" y2="15" />
+                  </svg>
+                </div>
+                <div class="cert-issuer">ServiceNow</div>
+                <h3 class="cert-title">Certified Implementation Specialist — CIS-DF</h3>
+                <div class="cert-date">MAR_2025</div>
+              </div>
+              <div class="cert-back">
+                <div class="cert-glow-spot"></div>
+                <div class="cert-back-icon">🗄️</div>
+                <p class="cert-back-text">Enterprise data management, ServiceNow platform configuration, and data
+                  foundation implementation.</p>
+                <div class="cert-actions-wrap">
+                  <button class="cert-view-btn">[ OPEN BLUEPRINT ]</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ══════════════ CONTACT ══════════════ -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="glow-spot cyan-center" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-label reveal" style="justify-content:center;">Contact</div>
+        <h2 class="section-heading reveal delay-1" id="contact-heading" style="text-align:center;">
+          Let's <span class="grad">Connect</span>
+        </h2>
+        <p class="section-sub reveal delay-2" style="margin: 0 auto 4rem; text-align:center;">
+          Have an exciting project or opportunity? I'd love to hear from you.
+          Let's build something intelligent together.
+        </p>
+
+        <div class="contact-layout">
+
+          <!-- Left: Info -->
+          <div class="contact-intro">
+            <div class="contact-links">
+              <a href="mailto:manishharode772@gmail.com" class="contact-link reveal delay-1">
+                <div class="contact-icon-wrap">✉️</div>
+                <div>
+                  <span class="contact-link-label">Email</span>
+                  <span class="contact-link-value">manishharode772@gmail.com</span>
+                </div>
+              </a>
+              <a href="https://github.com/ManishHarode1210" target="_blank" rel="noopener"
+                class="contact-link reveal delay-3">
+                <div class="contact-icon-wrap">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-link-label">GitHub</span>
+                  <span class="contact-link-value">ManishHarode1210</span>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="contact-link reveal delay-4">
+                <div class="contact-icon-wrap">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-link-label">LinkedIn</span>
+                  <span class="contact-link-value">Manish Harode</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="contact-form-wrap reveal delay-3">
+            <h3 class="form-heading">Send a Message</h3>
+            <p class="form-sub">I respond within 24 hours — let's talk.</p>
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-name">Name</label>
+                  <input type="text" id="f-name" name="name" class="form-input" placeholder="Your Name" required
+                    autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="f-email">Email</label>
+                  <input type="email" id="f-email" name="email" class="form-input" placeholder="your@email.com" required
+                    autocomplete="email" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="f-subject">Subject</label>
+                <input type="text" id="f-subject" name="subject" class="form-input" placeholder="What's this about?"
+                  required />
+              </div>
+              <div class="form-group">
+                <label for="f-message">Message</label>
+                <textarea id="f-message" name="message" class="form-textarea"
+                  placeholder="Tell me about your project or opportunity…" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="form-submit" id="form-submit">
+                <span>Send Message ↗</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ FOOTER ══════════════ -->
+    <footer role="contentinfo">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <strong>Manish Harode</strong> — AI Developer &amp; Software Engineer
+          </div>
+          <div class="footer-center">
+            <div class="ai-pulse" aria-hidden="true"></div>
+            Powered by Curiosity &amp; Code
+          </div>
+          <div class="footer-links">
+            <a href="https://github.com/ManishHarode1210" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:manishharode772@gmail.com">Email</a>
+          </div>
+        </div>
+        <div class="footer-copy">
+          © 2026 Designed &amp; Developed by Manish Harode
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /.page-wrapper -->
+
+  <!-- ══════════════ CERTIFICATE MODAL ══════════════ -->
+  <div id="cert-modal" class="cert-modal" role="dialog" aria-modal="true" aria-labelledby="modal-cert-title">
+    <div id="cert-modal-overlay" class="cert-modal-overlay"></div>
+    <div class="cert-modal-container">
+      <button id="cert-modal-close" class="cert-modal-close" aria-label="Close Modal">✕</button>
+
+      <div class="cert-modal-grid">
+        <!-- Left: Interactive High-Tech Blueprint Mockup -->
+        <div class="cert-modal-visual">
+          <div class="blueprint-card">
+            <div class="blueprint-bg-grid"></div>
+            <div class="blueprint-badge-header">
+              <span class="blueprint-badge-tag">[ SECURE_ARCHIVE ]</span>
+              <span class="blueprint-badge-id" id="mockup-cert-id">MH-IBM-AI-8274</span>
+            </div>
+
+            <div class="blueprint-center">
+              <div class="blueprint-logo-container" id="modal-cert-logo-container"></div>
+              <div class="blueprint-issuer-lbl" id="mockup-cert-issuer">IBM</div>
+              <h4 class="blueprint-title" id="mockup-cert-title">Fundamentals of Artificial Intelligence</h4>
+            </div>
+
+            <div class="blueprint-footer">
+              <div class="blueprint-footer-sec">
+                <span class="blueprint-lbl">ISSUED_TO</span>
+                <span class="blueprint-val">MANISH_HARODE</span>
+              </div>
+              <div class="blueprint-footer-sec">
+                <span class="blueprint-lbl">TIMESTAMP</span>
+                <span class="blueprint-val" id="mockup-cert-date">OCT_2024</span>
+              </div>
+            </div>
+
+            <!-- Scanning Laser Line Animation -->
+            <div class="blueprint-scanner"></div>
+          </div>
+        </div>
+
+        <!-- Right: Technical Breakdown & Telemetry -->
+        <div class="cert-modal-details">
+          <div class="details-eyebrow">[ CERTIFICATE DIAGNOSTIC ]</div>
+          <h3 id="modal-cert-title" class="details-title">Fundamentals of Artificial Intelligence</h3>
+          <div class="details-issuer-row">
+            <span class="issuer-label">ORGANISATION:</span>
+            <span id="modal-cert-issuer" class="issuer-value">IBM</span>
+          </div>
+
+          <div class="details-divider"></div>
+
+          <div class="details-telemetry">
+            <div class="tel-item">
+              <span class="tel-label">CREDENTIAL_ID</span>
+              <span id="modal-cert-id" class="tel-value">MH-IBM-AI-8274</span>
+            </div>
+            <div class="tel-item">
+              <span class="tel-label">VERIFICATION_STATUS</span>
+              <span class="tel-value status-online">[ SECURE_VERIFIED ]</span>
+            </div>
+            <div class="tel-item">
+              <span class="tel-label">COMPILATION_DATE</span>
+              <span id="modal-cert-date" class="tel-value">OCT_2024</span>
+            </div>
+          </div>
+
+          <div class="details-skills-section">
+            <div class="skills-heading">[ KEY_VERIFIED_CAPABILITIES ]</div>
+            <div id="modal-cert-skills" class="modal-skills-grid">
+              <!-- Dynamically populated tags -->
+            </div>
+          </div>
+
+          <div class="details-actions">
+            <a id="modal-cert-verify-link" href="#" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary btn-block modal-verify-btn">
+              <span>VERIFY CREDENTIAL ONLINE ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ JAVASCRIPT MODULES ═══════════════ -->
+  <script src="js/neural.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/mobile-menu.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/tilt.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/project-neural.js"></script>
+  <script src="js/skills-hud.js"></script>
+  <script src="js/certs.js"></script>
+
+</body>
+
+</html>
